@@ -1,3 +1,3 @@
 export default module1func1 = () => {
-    alert ("module1, function1")
+    alert ("Ghis is func1 in module1")
 };
