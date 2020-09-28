@@ -11,18 +11,28 @@
 
         <h2>Normal scripts</h2>
 
-        <p>Here there are scripts (not loaded as modules) interact with each other</p>
+        <p>Here there are scripts (not loaded as modules) that interact with each other</p>
 
         <input value="Script 1 Func 1" type=button onclick="func1()"/>
         <input value="Script 1 Func 2" type=button onclick="func2()"/>
-        <input value="Script 1 Func 3" type=button onclick="func3()"/>
+        <input value="Script 2 Func 3" type=button onclick="func3()"/>
 
         <h2>Modules</h2>
+
+        <p>Here there are modules that interact with each other</p>
+
         <script src="./module1.js" ></script>
         <script src="./module2.js"></script>
+        <script type="module">
+            import { module2func2 } from './module2.js'
+            
+            export default function btnClick() {
+                module2func2()
+            }
+        </script>
 
         <input value="Module 1 Func 1" type=button onclick="module1func1()"/>
-        <input value="Module 2 Func 2" type=button onclick="module2func2()"/>
+        <input value="Module 2 Func 2" type=button onclick="btnClick()"/>
 
     </body>
 </html>
