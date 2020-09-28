@@ -1,2 +1,3 @@
-func1 = () => { alert ("hello1") }
-func2 = () => { alert ("hello2") }
+export default module1func1 = () => {
+    alert ("module1, function1")
+};
