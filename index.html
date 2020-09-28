@@ -23,16 +23,16 @@
 
         <script src="./module1.js" type="module"></script>
         <script src="./module2.js" type="module"></script>
-        <script type="text/javascript">
+        <script type="module">
             import { module2func2 } from './module2.js'
             
-            function btnClick() {
-                module2func2()
+            document.onload = function(e) {
+                document.getElementById('btn-mod2-func2').addEventListener('click', module2func2, false);
             }
         </script>
 
-        <input value="Module 1 Func 1" type=button onclick="module1func1()"/>
-        <input value="Module 2 Func 2" type=button onclick="btnClick()"/>
+        <input id="btn-mod1-func1" value="Module 1 Func 1" type=button onclick="module1func1()"/>
+        <input id="btn-mod2-func2" value="Module 2 Func 2" type=button onclick="btnClick()"/>
 
     </body>
 </html>
