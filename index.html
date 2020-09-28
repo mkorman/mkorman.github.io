@@ -7,11 +7,11 @@
         <script src="./script1.js" ></script>
         <script src="./script2.js"></script>
 
-        <h1>Thanks for checking out my test repo</h1>
+        <h1>ES5 modules test repo</h1>
 
         <h2>Normal scripts</h2>
 
-        <p>Here there are scripts (not loaded as modules) that interact with each other</p>
+        <p>Scripts below are not loaded as modules. They can interact with each other globally and can be called from HTML elements.</p>
 
         <input value="Script 1 Func 1" type=button onclick="func1()"/>
         <input value="Script 1 Func 2" type=button onclick="func2()"/>
@@ -19,10 +19,10 @@
 
         <h2>Modules</h2>
 
-        <p>Here there are modules that interact with each other</p>
+        <p>Scripts below are modules. They cannot be referenced directly from HTML elements</p>
 
-        <script src="./module1.js" ></script>
-        <script src="./module2.js"></script>
+        <script src="./module1.js" type="module"></script>
+        <script src="./module2.js" type="module"></script>
         <script type="text/javascript">
             import { module2func2 } from './module2.js'
             
