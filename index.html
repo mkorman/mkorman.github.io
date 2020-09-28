@@ -3,12 +3,17 @@
         <link rel="stylesheet" href="site.css">
     </head>
     <body>
-        <h1>Thanks for checking out my test repo</h1>
-        <p>Here I'm testing how javascript modules interact with each other</p>
-        <input text="1" type=button onclick="func1()"/>
-        <input type=button onclick="func2()"/>
-        <input type=button onclick="func3()"/>
-        <script type="module" src="./module1.js" ></script>
+
+        <script src="./module1.js" ></script>
         <script src="./module2.js"></script>
+
+        <h1>Thanks for checking out my test repo</h1>
+
+        <p>Here I'm testing how javascript modules interact with each other</p>
+
+        <input value="1" type=button onclick="func1()"/>
+        <input value="2" type=button onclick="func2()"/>
+        <input value="3" type=button onclick="func3()"/>
+
     </body>
 </html>
